@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 스튜디오 업로더</title>
+<style>
+  :root { --bg: #111113; --card: #1c1c1f; --text: #f4f4f5; --muted: #a1a1aa; --pink: #f472b6; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  h1 span { color: var(--pink); }
+  h2 { font-size: 20px; margin: 36px 0 8px; border-top: 1px solid #2a2a2e; padding-top: 24px; }
+  h3 { font-size: 16px; margin: 20px 0 4px; color: var(--pink); }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: 14px; }
+  a { color: var(--pink); }
+  nav a { margin-right: 16px; }
+  .en { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>AI 스튜디오 <span>업로더</span></h1>
+  <p class="muted">AI Studio Uploader · 개인용 업로드 도구 · Personal upload tool</p>
+  <nav><a href="#about">소개 About</a><a href="#privacy">개인정보처리방침 Privacy Policy</a><a href="#terms">이용 약관 Terms</a></nav>
+
+  <h2 id="about">소개</h2>
+  <p>AI 스튜디오 업로더는 채널 운영자 한 사람이 자기 컴퓨터에서 직접 만든 짧은 영상(쇼츠)을
+    <b>자기 YouTube 채널에 올리는 개인용 데스크톱 도구</b>입니다.
+    운영자 외의 사용자는 없으며, 앱을 배포하거나 판매하지 않습니다.</p>
+  <ul>
+    <li>YouTube Data API v3로 운영자 본인 채널에 영상 업로드 (제목·설명·태그·공개 범위·예약 공개)</li>
+    <li>업로드한 영상의 공개 통계(조회수·좋아요·댓글 수) 확인</li>
+  </ul>
+  <p class="en">AI Studio Uploader is a personal desktop tool used by a single channel owner to upload short videos
+    they made to their own YouTube channel through the YouTube Data API v3, and to view public statistics of
+    those videos. It has no other users and is not distributed or sold.</p>
+
+  <h2 id="privacy">개인정보처리방침</h2>
+  <p class="muted">시행일: 2026년 11월 3일 · Effective: November 3, 2026</p>
+
+  <h3>1. 수집·이용하는 정보</h3>
+  <ul>
+    <li><b>Google OAuth 토큰</b>: 운영자가 Google 계정으로 로그인해 허용하면 받는 접근 토큰과 갱신 토큰.
+      업로드(youtube.upload)와 채널 확인(youtube.readonly) 권한만 요청합니다.</li>
+    <li><b>채널 정보</b>: 로그인한 계정의 채널 ID와 채널 이름 (어느 채널에 올릴지 고르는 데만 사용)</li>
+    <li><b>영상 정보</b>: 운영자가 올리는 영상 파일과 제목·설명·태그, 업로드 후 받는 영상 ID와 공개 통계</li>
+  </ul>
+  <p class="en">The app uses Google OAuth tokens (scopes: youtube.upload, youtube.readonly), the channel ID and title of
+    the signed-in account, and the videos and metadata the owner chooses to upload, plus the resulting video IDs and
+    public statistics.</p>
+
+  <h3>2. 보관 방법</h3>
+  <p>모든 정보는 <b>운영자 본인의 컴퓨터에만</b> 저장됩니다. OAuth 토큰과 클라이언트 정보는 Windows 자격 증명 관리자에
+    암호화되어 보관되며, 별도의 서버나 클라우드로 전송·저장하지 않습니다.</p>
+  <p class="en">All data stays on the owner's own computer. OAuth tokens are stored encrypted in Windows Credential
+    Manager. Nothing is sent to or stored on any server operated by the developer.</p>
+
+  <h3>3. 제3자 제공</h3>
+  <p>수집한 정보를 판매하거나 제3자에게 제공하지 않습니다. 정보는 Google(YouTube) API를 호출할 때만 Google로 전송되며,
+    광고·분석·AI 학습 등 다른 목적으로 쓰지 않습니다.</p>
+  <p class="en">Data is never sold or shared with third parties. It is only sent to Google when calling the YouTube
+    API, and is not used for advertising, analytics or AI training.</p>
+
+  <h3>4. Google API 서비스 사용자 데이터 정책</h3>
+  <p>이 앱이 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의
+    제한적 사용(Limited Use) 요구사항을 포함해 이를 준수합니다.</p>
+  <p class="en">AI Studio Uploader's use and transfer of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.</p>
+
+  <h3>5. YouTube 서비스</h3>
+  <p>이 앱은 YouTube API 서비스를 사용합니다. 사용자는
+    <a href="https://www.youtube.com/t/terms">YouTube 서비스 약관</a>에 동의하는 것으로 간주되며,
+    Google의 정보 처리는 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따릅니다.</p>
+  <p class="en">This app uses YouTube API Services. By using it you agree to the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google handles data under the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h3>6. 삭제와 접근 철회</h3>
+  <ul>
+    <li>앱의 [연결 해제]를 누르면 저장된 토큰을 지우고 Google에도 토큰 폐기를 요청합니다.</li>
+    <li>언제든지 <a href="https://myaccount.google.com/permissions">Google 계정 → 보안 → 서드 파티 액세스</a>에서
+      이 앱의 권한을 직접 철회할 수 있습니다.</li>
+    <li>영상 통계 기록 등 컴퓨터에 남은 파일은 앱 폴더의 logs 폴더를 지우면 모두 삭제됩니다.</li>
+  </ul>
+  <p class="en">Use "연결 해제 (Disconnect)" in the app to delete stored tokens and revoke them with Google, or revoke
+    access at any time at <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>.
+    Local logs can be deleted by removing the app's logs folder.</p>
+
+  <h3>7. 문의</h3>
+  <p>yongaoogg@gmail.com</p>
+
+  <h2 id="terms">이용 약관</h2>
+  <p>이 도구는 운영자 본인만 사용하는 개인용 프로그램입니다. 사용자는 자기 채널에 자기가 권리를 가진 영상만 올리며,
+    <a href="https://www.youtube.com/t/terms">YouTube 서비스 약관</a>과 커뮤니티 가이드를 지켜야 합니다.
+    이 도구는 있는 그대로 제공되며, 업로드 결과에 대한 책임은 사용자에게 있습니다.</p>
+  <p class="en">This is a personal tool used only by its owner. Users must only upload videos they have rights to and
+    follow the YouTube Terms of Service and Community Guidelines. The tool is provided as is.</p>
+</main>
+</body>
+</html>
