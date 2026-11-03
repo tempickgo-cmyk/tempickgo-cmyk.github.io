@@ -32,10 +32,14 @@
   <ul>
     <li>YouTube Data API v3로 운영자 본인 채널에 영상 업로드 (제목·설명·태그·공개 범위·예약 공개)</li>
     <li>업로드한 영상의 공개 통계(조회수·좋아요·댓글 수) 확인</li>
+    <li>콘텐츠 기획을 위한 공개 인기 차트와 키워드 검색 결과 확인</li>
+    <li>운영자가 요청할 때 영상 제목과 공개 통계를 Google Gemini API로 분석해 주제 추천과 성과 분석에 활용</li>
   </ul>
   <p class="en">AI Studio Uploader is a personal desktop tool used by a single channel owner to upload short videos
     they made to their own YouTube channel through the YouTube Data API v3, and to view public statistics of
-    those videos. It has no other users and is not distributed or sold.</p>
+    those videos. It also reads public most-popular charts and keyword search results for content planning and, when the
+    owner asks, sends video titles and public statistics to the Google Gemini API for topic ideas and performance
+    analysis. It has no other users and is not distributed or sold.</p>
 
   <h2 id="privacy">개인정보처리방침</h2>
   <p class="muted">시행일: 2026년 11월 3일 · Effective: November 3, 2026</p>
@@ -58,10 +62,13 @@
     Manager. Nothing is sent to or stored on any server operated by the developer.</p>
 
   <h3>3. 제3자 제공</h3>
-  <p>수집한 정보를 판매하거나 제3자에게 제공하지 않습니다. 정보는 Google(YouTube) API를 호출할 때만 Google로 전송되며,
-    광고·분석·AI 학습 등 다른 목적으로 쓰지 않습니다.</p>
-  <p class="en">Data is never sold or shared with third parties. It is only sent to Google when calling the YouTube
-    API, and is not used for advertising, analytics or AI training.</p>
+  <p>수집한 정보를 판매하거나 Google 외의 제3자에게 제공하지 않으며, 광고 목적으로 쓰지 않습니다. 정보는 Google API를 호출할 때만
+    Google로 전송됩니다. 운영자가 주제 추천이나 성과 분석을 요청하면 영상 제목과 공개 통계를 Google Gemini API로 보내며, 이 정보는
+    <a href="https://ai.google.dev/gemini-api/terms">Gemini API 약관</a>에 따라 처리됩니다.</p>
+  <p class="en">Data is never sold, shared with third parties other than Google, or used for advertising. It is only sent
+    to Google when calling Google APIs. When the owner requests topic ideas or performance analysis, video titles and
+    public statistics are sent to the Google Gemini API and handled under the
+    <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms</a>.</p>
 
   <h3>4. Google API 서비스 사용자 데이터 정책</h3>
   <p>이 앱이 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
